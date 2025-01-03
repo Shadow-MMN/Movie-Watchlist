@@ -1,0 +1,3 @@
+I want to this button {  <button class="add-to-watchlist" id="add-to-watchlist"><i class="fa-solid fa-circle-plus"></i>Watchlist</button>} to add that movie to my localStorage and also display it in my watchlist.html
+I also want the it to have a remove button in the watchlist.html {<button class="add-to-watchlist" id="add-to-watchlist"><i class="fa-solid fa-circle-minus"></i>Remove</button>}
+When the remove button is pressed I want the to remove the movie from localStorage and also from the watchlist.html

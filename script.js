@@ -67,11 +67,17 @@ function moviesFound() {
     mainTag.style.display = "block";
     mainTag.style.removeProperty('align-items');
     movieContainerBackground.style.display = "none";
+    moviesContainer.style.display = 'block'
 }
 
 // Function to handle when no movies are found
 function movieNotFound() {
+    mainTag.style.height = '500px'
+    mainTag.style.display = 'flex'
+    mainTag.style.alignItems = 'center'
+    movieContainerBackground.style.display = "flex";
     searchMessage.textContent = 'No results found. Try a different search.';
+    moviesContainer.style.display = 'none'
 }
 
 // Event handler for form submission
@@ -84,3 +90,4 @@ async function handleSearch(e) {
 }
 
 searchForm.addEventListener('submit', handleSearch);
+
