@@ -1,3 +1,4 @@
+const movieId = []
 const searchForm = document.getElementById('search-form');
 const searchBar = document.getElementById('search-bar');
 const moviesContainer = document.getElementById("movies-container");
@@ -5,12 +6,12 @@ const searchMessage = document.getElementById("search-message");
 const mainTag = document.getElementById("main-tag");
 const movieContainerBackground = document.getElementById("movie-container-background");
 
+
 // Function to fetch movies list based on search query
 async function handleFetch() {
     try {
         const res = await fetch(`http://www.omdbapi.com/?s=${searchBar.value}&apikey=14f1307`);
         const data = await res.json();
-        console.log(data);
         return data;
     } catch (error) {
         searchMessage.textContent = 'Something went wrong. Please try again.';
@@ -49,7 +50,7 @@ async function renderMovies(data) {
                 <div class="movie-info">
                     <p>${details.Runtime}</p>
                     <p class="middle-man-for-info-gap">${details.Genre}</p>
-                    <button class="add-to-watchlist" id="add-to-watchlist"><i class="fa-solid fa-circle-plus"></i>Watchlist</button>
+                    <button class="add-to-watchlist" id="add-to-watchlist"  data-id="${details.imdbID}"><i class="fa-solid fa-circle-plus"></i>Watchlist</button>
                 </div>
                 <div class="movie-description">
                     <p>${details.Plot}</p>
@@ -91,3 +92,17 @@ async function handleSearch(e) {
 
 searchForm.addEventListener('submit', handleSearch);
 
+document.addEventListener('click', function(e){
+    if(e.target.dataset.id){
+       saveToLocalStorage(e.target.dataset.id) 
+    }
+})
+function saveToLocalStorage(movie){
+    if(!movieId.includes(movie)){
+        movieId.push(movie)
+        localStorage.setItem("movie", JSON.stringify(movieId))
+    }else{
+        alert('Movie already added to watchlist')
+    }
+      console.log(JSON.parse(localStorage.getItem("movie")))
+}

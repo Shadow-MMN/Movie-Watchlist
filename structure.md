@@ -28,7 +28,7 @@
                 <div class="movie-info">
                     <p>117 min</p>
                     <p class="middle-man-for-info-gap">Action,Drama,Sci-fi</p>
-                    <button class="add-to-watchlist" id="add-to-watchlist"><i class="fa-solid fa-circle-minus"></i>Watchlist</button>
+                    <button class="add-to-watchlist" id="add-to-watchlist"><i class="fa-solid fa-circle-minus"></i>Remove</button>
                 </div>
                 <div class="movie-description">
                     <p>A blade runner must pursue and terminate four replicants who stole a ship in space, and have returned to Earth to find their creator.</p>
@@ -48,18 +48,4 @@
 
 
 
-                <img src="./Images/testing-image.png" alt="A cover of the movie blade runner" >
-                <div class="movie-header">
-                    <h3>Blade Runner</h3>
-                    <i class="fa-solid fa-star"></i>
-                    <P>8.1</P>
-                </div>
-                <div class="movie-info">
-                    <p>117 min</p>
-                    <p class="middle-man-for-info-gap">Action,Drama,Sci-fi</p>
-                    <button class="add-to-watchlist" id="add-to-watchlist"><i class="fa-solid fa-circle-minus"></i>Watchlist</button>
-                </div>
-                <div class="movie-description">
-                    <p>A blade runner must pursue and terminate four replicants who stole a ship in space, and have returned to Earth to find their creator.</p>
-                </div>
-            </div>
+        
