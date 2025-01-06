@@ -101,9 +101,8 @@ function saveToLocalStorage(movie) {
     if (!movieId.includes(movie)) {
         movieId.push(movie);
         localStorage.setItem("movie", JSON.stringify(movieId));
-    } else {
-        alert('Movie already added to watchlist');
-    }
+    } 
+    console.log(JSON.parse(localStorage.getItem("movie")));
 }
 
-
+console.log(movieId);
