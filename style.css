@@ -55,6 +55,7 @@ form{
     border-left: 1px solid #D1D5DB;
     background-color: #F9FAFB;
     padding: 5px 10px;
+    color: black;
 }
 main{
     height: 500px;
