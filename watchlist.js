@@ -8,7 +8,7 @@ const mainTagWatchlist = document.getElementById("main-tag-watchlist");
 const movieContainerBackgroundWatchlist = document.getElementById("movie-container-background-watchlist");
 
 // Function to render movies in the watchlist
-function consoleMessages() {
+function renderWatchlist() {
     if (messages === null || messages.length === 0) {
         noWatchlist();
         return;
@@ -70,7 +70,7 @@ function noWatchlist() {
 }
 
 // Call the function to display the watchlist
-consoleMessages();
+renderWatchlist();
 
 // Event listener for delete button
 document.addEventListener('click', function(e) {
@@ -91,7 +91,7 @@ function deleteMovie(movie) {
     localStorage.setItem('movie', JSON.stringify(messages));
 
     // Refresh the UI
-    consoleMessages();
+    renderWatchlist();
 }
 
 console.log(messages);
