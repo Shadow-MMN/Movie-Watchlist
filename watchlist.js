@@ -18,7 +18,7 @@ function renderWatchlist() {
     
     // Loop through each message and fetch movie data
     messages.forEach(message => {
-        fetch(`http://www.omdbapi.com/?i=${message}&apikey=14f1307`)
+        fetch(`https://www.omdbapi.com/?i=${message}&apikey=14f1307`)
             .then(res => res.json())
             .then(data => {
                 html += `

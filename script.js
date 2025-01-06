@@ -8,7 +8,7 @@ const movieContainerBackground = document.getElementById("movie-container-backgr
 
 // Function to fetch movies list based on search query
 function handleFetch() {
-    return fetch(`http://www.omdbapi.com/?s=${searchBar.value}&apikey=14f1307`)
+    return fetch(`https://www.omdbapi.com/?s=${searchBar.value}&apikey=14f1307`)
         .then(res => res.json())
         .catch(error => {
             searchMessage.textContent = 'Something went wrong. Please try again.';
@@ -18,7 +18,7 @@ function handleFetch() {
 
 // Function to fetch detailed movie information
 function fetchMovieDetails(imdbID) {
-    return fetch(`http://www.omdbapi.com/?i=${imdbID}&apikey=14f1307`)
+    return fetch(`https://www.omdbapi.com/?i=${imdbID}&apikey=14f1307`)
         .then(res => res.json())
         .catch(error => {
             console.error(`Error fetching details for IMDb ID ${imdbID}:`, error);
